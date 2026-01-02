@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Finder | Powered by SerpAPI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Animated background elements -->
+    <div class="bg-blob-1"></div>
+    <div class="bg-blob-2"></div>
+    
+    <header>
+      <div class="header-content">
+        <div class="logo-container">
+          <i class="fas fa-search fa-bounce"></i>
+          <h1>JobFinder <span class="highlight">🔍</span></h1>
+        </div>
+        <p class="tagline">Find your next opportunity instantly — powered by Google Jobs</p>
+        
+        <!-- Stats counter -->
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number" id="job-count">1,234+</span>
+            <span class="stat-label">Jobs Posted</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="company-count">500+</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="location-count">80+</span>
+            <span class="stat-label">Locations</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Search section with animation -->
+      <section class="search-section">
+        <div class="search-container">
+          <div class="search-header">
+            <h2><i class="fas fa-rocket"></i> Find Your Dream Job</h2>
+            <p class="search-subtitle">Search from thousands of opportunities worldwide</p>
+          </div>
+          
+          <form id="jobForm" class="search-form">
+            <div class="input-with-icon">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="query"
+                placeholder="e.g. Frontend Developer in India"
+                required
+                autocomplete="off"
+              />
+            </div>
+            
+            <div class="search-options">
+              <div class="quick-search-tags">
+                <span class="tag-label">Try:</span>
+                <button type="button" class="quick-tag" data-query="Software Engineer">Software Engineer</button>
+                <button type="button" class="quick-tag" data-query="Remote Developer">Remote Developer</button>
+                <button type="button" class="quick-tag" data-query="Data Analyst">Data Analyst</button>
+                <button type="button" class="quick-tag" data-query="UX Designer">UX Designer</button>
+              </div>
+            </div>
+            
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+              <span>Search Jobs</span>
+              <div class="btn-pulse"></div>
+            </button>
+          </form>
+          
+          <!-- Featured companies -->
+          <div class="featured-companies">
+            <p class="featured-label">Featured Companies:</p>
+            <div class="company-logos">
+              <div class="company-logo"><i class="fab fa-google"></i> Google</div>
+              <div class="company-logo"><i class="fab fa-microsoft"></i> Microsoft</div>
+              <div class="company-logo"><i class="fab fa-amazon"></i> Amazon</div>
+              <div class="company-logo"><i class="fab fa-apple"></i> Apple</div>
+              <div class="company-logo"><i class="fab fa-meta"></i> Meta</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results section -->
+      <section class="results-section">
+        <!-- Loading animation -->
+        <div id="loading" class="hidden">
+          <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Searching through thousands of opportunities...</p>
+            <div class="loading-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results header -->
+        <div class="results-header hidden" id="resultsHeader">
+          <h3><i class="fas fa-briefcase"></i> Job Results</h3>
+          <div class="results-count">
+            <span id="resultsCount">0</span> jobs found
+          </div>
+          <div class="filter-options">
+            <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+            <button class="sort-btn"><i class="fas fa-sort"></i> Sort</button>
+          </div>
+        </div>
+        
+        <!-- Results container -->
+        <div id="results" class="results-grid"></div>
+        
+        <!-- No results message -->
+        <div id="noResults" class="no-results hidden">
+          <div class="no-results-icon">
+            <i class="fas fa-search fa-2x"></i>
+          </div>
+          <h3>No jobs found</h3>
+          <p>Try adjusting your search terms or browse our suggested jobs above.</p>
+          <button class="retry-btn">Try Again</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-search"></i>
+          <h3>JobFinder</h3>
+        </div>
+        <p>© 2025 JobFinder. Built with ❤️ using SerpAPI.</p>
+        <p>Made By Jatin Gupta</p>
+        <div class="footer-links">
+          <a href="https://github.com/jatin009v"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://jatinguptaportfolio.netlify.app/"><i class="fas fa-envelope"></i> Contact</a>
+          
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
